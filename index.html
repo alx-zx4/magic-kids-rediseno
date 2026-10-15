@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Kids · Salón de Fiestas Infantiles en Santa Catarina</title>
+<meta name="description" content="Salón de fiestas infantiles en Santa Catarina, N.L. Salón montado, área de juegos, segundo piso con billar, paquetes de comida, globos y fotos. Tú solo traes el pastel.">
+<link rel="icon" type="image/png" href="fotos/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="fotos/hero.webp">
+<link rel="preload" as="image" href="fotos/logo.webp">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=8">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- INTRO (cortinilla circular con el logo) -->
+<div id="intro" aria-hidden="true"><img src="fotos/logo.webp" alt=""></div>
+<div id="introRing" aria-hidden="true"></div>
+<script>
+(function(){
+  var d=document.documentElement, el=document.getElementById('intro'), ring=document.getElementById('introRing');
+  d.classList.add('js','intro-lock');
+  function done(){ if(el&&el.parentNode) el.remove(); if(ring&&ring.parentNode) ring.remove(); d.classList.remove('intro-lock'); }
+  if(el) el.addEventListener('animationend',function(e){ if(e.animationName==='introOpen') done(); });
+  setTimeout(done,2900);
+})();
+</script>
+
+<!-- NAV (original) -->
+<nav id="main-nav" aria-label="Principal">
+  <a href="#hero" class="nav-logo" aria-label="Magic Kids"><img src="fotos/logo.webp" alt="Magic Kids" width="700" height="597"></a>
+  <ul class="nav-links">
+    <li><a href="#espacios">Nuestro Salón</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#precios">Paquetes</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#testimonios">Reseñas</a></li>
+    <li><a href="#calendario">Fechas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contacto">Cotizar</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#espacios">Nuestro Salón</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#precios">Paquetes</a>
+  <a href="#galeria">Galería</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#testimonios">Reseñas</a>
+  <a href="#calendario">Fechas</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto" class="nav-mobile-cta">Cotizar mi fiesta</a>
+</div>
+
+<main>
+
+<!-- ═════════════ HERO (original) ═════════════ -->
+<section id="hero">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-fx" aria-hidden="true">
+    <div class="hx-item" style="left:4%;top:18%;--dp:20"><div class="hx-float" style="--d:0s"><div class="hb" style="--s:clamp(60px,7vw,104px);--c:#FF3D9A;--c2:#FF9BCB;--c3:#B01A66"><i></i></div></div></div>
+    <div class="hx-item hx-md" style="left:11%;top:54%;--dp:30"><div class="hx-float" style="--d:-2s"><div class="hb" style="--s:clamp(46px,4.8vw,70px);--c:#33C13D;--c2:#8CF08F;--c3:#1B7A24"><i></i></div></div></div>
+    <div class="hx-item" style="left:90%;top:16%;--dp:22"><div class="hx-float" style="--d:-1s"><div class="hb" style="--s:clamp(60px,7.2vw,108px);--c:#9B4DFF;--c2:#D2B0FF;--c3:#5516A8"><i></i></div></div></div>
+    <div class="hx-item hx-md" style="left:84%;top:56%;--dp:30"><div class="hx-float" style="--d:-3s"><div class="hb" style="--s:clamp(46px,4.8vw,70px);--c:#FF5E1E;--c2:#FFB08A;--c3:#B33A07"><i></i></div></div></div>
+  </div>
+  <div class="hero-inner">
+    <h1 class="hero-title"><img class="hero-logo" src="fotos/logo.webp" alt="Magic Kids" width="700" height="597" fetchpriority="high"></h1>
+    <p class="hero-tag">Salón de fiestas infantiles,<br><span>tú solo traes el pastel</span></p>
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn-primary">Cotizar mi fiesta<svg viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5h10M7.5 2.5l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#galeria" class="btn-secondary">Ver galería</a>
+    </div>
+  </div>
+</section>
+
+<!-- Cinta divisora sobre el borde del hero (original) -->
+<div class="belt-divider"><div class="belt-wrap" id="heroBelt"><svg class="belt-svg" id="heroBeltSvg" role="img" aria-label="Tipos de fiesta que organizamos"></svg></div></div>
+
+<!-- ═════════════ ESPACIOS ═════════════ -->
+<section id="espacios" class="sec">
+  <canvas class="ballpit" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Tres espacios llenos de juego" data-circle="espacios" data-avoid="30"></h2>
+      <p class="lede rv" data-avoid="20">Salón principal para el festejo, área de juegos a la vista y un segundo piso para respirar. Todo bajo un mismo techo.</p>
+    </header>
+
+    <div class="esp-nav" role="tablist" aria-label="Espacios del salón">
+      <button class="esp-tab" role="tab" id="tab-1" aria-controls="esp-1" aria-selected="true" style="--c:var(--grape)">Salón Principal</button>
+      <button class="esp-tab" role="tab" id="tab-2" aria-controls="esp-2" aria-selected="false" tabindex="-1" style="--c:#1FA52B">Área de Juegos</button>
+      <button class="esp-tab" role="tab" id="tab-3" aria-controls="esp-3" aria-selected="false" tabindex="-1" style="--c:var(--tang)">Segundo Piso</button>
+    </div>
+
+    <article class="esp-panel" id="esp-1" role="tabpanel" aria-labelledby="tab-1" style="--c:var(--grape)">
+      <div class="esp-photo"><img src="fotos/espacio-salon.webp" alt="Salón principal con techo drapeado arcoíris y mesas montadas" loading="lazy" width="800" height="674"></div>
+      <div class="esp-copy">
+        <h3>Salón Principal</h3>
+        <p class="esp-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Capacidad a la medida de tu fiesta</p>
+        <p>El salón que ven en las fotos: muros pintados de colores, techo drapeado y mesas montadas con mantel a rayas antes de que llegues. Escenario propio para el show y espacio de sobra para correr.</p>
+        <ul class="ticks"><li>Salón con clima</li><li>Escenario propio</li><li>Sonido y micrófono</li><li>Mesas y sillas incluidas</li><li>Decoración montada</li></ul>
+        <a href="#contacto" class="btn">Cotizar este espacio<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      </div>
+    </article>
+
+    <article class="esp-panel" id="esp-2" role="tabpanel" aria-labelledby="tab-2" style="--c:#1FA52B" hidden>
+      <div class="esp-photo"><img src="fotos/espacio-juegos.webp" alt="Estructura de juegos con tobogán en espiral amarillo y red para trepar" loading="lazy" width="958" height="807"></div>
+      <div class="esp-copy">
+        <h3>Área de Juegos</h3>
+        <p class="esp-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Capacidad a la medida de tu fiesta</p>
+        <p>Estructura de juegos de varios niveles con tobogán en espiral, red para trepar y toro mecánico. Está a la vista de las mesas, así que los papás platican tranquilos con los niños siempre enfrente.</p>
+        <ul class="ticks"><li>Tobogán en espiral</li><li>Toro mecánico</li><li>Área para bebés</li><li>A la vista de las mesas</li><li>Zona techada</li></ul>
+        <a href="#contacto" class="btn">Cotizar este espacio<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      </div>
+    </article>
+
+    <article class="esp-panel" id="esp-3" role="tabpanel" aria-labelledby="tab-3" style="--c:var(--tang)" hidden>
+      <div class="esp-photo"><img src="fotos/espacio-terraza.webp" alt="Segundo piso tipo terraza con mural de Tigres y Rayados en el barandal" loading="lazy" width="768" height="647"></div>
+      <div class="esp-copy">
+        <h3>Segundo Piso</h3>
+        <p class="esp-cap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Capacidad a la medida de tu fiesta</p>
+        <p>Arriba hay un segundo piso tipo terraza con vista a todo el salón y mesas de billar, con el mural de Tigres y Rayados pintado en el barandal. Buen lugar para que los adultos se sienten mientras los niños juegan abajo.</p>
+        <ul class="ticks"><li>Mesas de billar</li><li>Vista al salón</li><li>Mural de Tigres y Rayados</li><li>Zona de adultos</li></ul>
+        <a href="#contacto" class="btn">Cotizar este espacio<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ═════════════ NOSOTROS + CONSULTA ═════════════ -->
+<section id="nosotros" class="sec dark">
+  <div class="wrap nos-grid">
+    <div class="nos-left">
+      <h2 class="section-title light vcr" data-vcr="Hacemos fiestas que se recuerdan" data-circle="fiestas"></h2>
+      <div class="nos-body rv">
+        <p>Magic Kids es un salón de fiestas infantiles en Santa Catarina. Aquí se han festejado cumpleaños, baby showers, bautizos y primeras comuniones.</p>
+        <p>Salón techado y con clima, área de juegos a la vista de las mesas y todo montado cuando llegas: decoración puesta, mesas con mantel y el escenario listo para el show. Tú traes el pastel.</p>
+      </div>
+    </div>
+
+    <form class="cf rv" id="consultaForm" novalidate>
+      <h3>Cuéntanos de tu fiesta</h3>
+      <p class="cf-sub">Llena los datos y te mandamos todo por WhatsApp.</p>
+      <div class="cf-grid">
+        <label class="cf-f"><span>Tu nombre</span><input type="text" id="cf-nombre" placeholder="Ej. Karla" autocomplete="name" required></label>
+        <label class="cf-f"><span>Teléfono</span><input type="tel" id="cf-telefono" placeholder="81 1234 5678" autocomplete="tel" inputmode="tel" required></label>
+        <label class="cf-f full"><span>Tipo de fiesta</span>
+          <select id="cf-tipo" required>
+            <option value="" disabled selected>Elige una opción</option>
+            <option>Cumpleaños infantil</option>
+            <option>Fiesta temática</option>
+            <option>Baby shower</option>
+            <option>Bautizo</option>
+            <option>Graduación de kinder</option>
+            <option>Día del niño</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label class="cf-f"><span>Fecha</span><input type="date" id="cf-fecha" required></label>
+        <label class="cf-f"><span>Hora</span><input type="time" id="cf-hora" required></label>
+        <label class="cf-f"><span>Invitados</span><input type="number" id="cf-invitados" min="1" inputmode="numeric" placeholder="Ej. 50"></label>
+        <label class="cf-f"><span>Correo <em>(opcional)</em></span><input type="email" id="cf-correo" placeholder="tu@correo.com" autocomplete="email"></label>
+      </div>
+      <button type="submit" class="btn btn-wa">Enviar por WhatsApp<i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.88 9.88 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg></i></button>
+      <p class="cf-hint">Te contestamos el mismo día, sin compromiso.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ═════════════ PAQUETES ═════════════ -->
+<section id="precios" class="sec">
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Nuestros paquetes de fiesta" data-circle="paquetes"></h2>
+      <p class="lede rv">Elige el paquete que mejor le quede a tu fiesta y escríbenos para cotizarlo. Todos están disponibles de lunes a jueves y de viernes a domingo.</p>
+    </header>
+
+    <div class="pq-info rv">
+      <div class="pq-box">
+        <h3>Todos los paquetes son para</h3>
+        <div class="flaps"><span class="flap">50</span><span class="flap">70</span><span class="flap">100</span><span class="flap-u">invitados</span></div>
+      </div>
+      <div class="pq-box">
+        <h3>Horarios de 3 horas y media</h3>
+        <ul class="pq-hor"><li>10 am a 1:30 pm</li><li>2 pm a 5:30 pm</li><li>6 pm a 9:30 pm</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mantel a rayas, como el de las mesas del salón -->
+  <div class="cloth">
+    <div class="wrap plates">
+      <article class="plate rv" style="--c:var(--tang)">
+        <div class="dish"><img src="fotos/menu/burger.webp" alt="Hamburguesa con tocino y queso" loading="lazy" style="--w:86%;--r:-8deg"></div>
+        <div class="tent"><h3>Paquete Burger</h3><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Burger" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+      <article class="plate rv" style="--c:var(--grape)">
+        <div class="dish"><img src="fotos/menu/chili-dog.webp" alt="Chili dog" loading="lazy" style="--w:92%;--r:5deg"></div>
+        <div class="tent"><h3>Paquete Chili Dog</h3><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Chili Dog" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+      <article class="plate rv" style="--c:#1FA52B">
+        <div class="dish"><img src="fotos/menu/hot-dog.webp" alt="Hot dog" loading="lazy" style="--w:88%;--r:7deg"></div>
+        <div class="tent"><h3>Paquete Hot Dog</h3><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Hot Dog" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+      <article class="plate rv" style="--c:var(--pink)">
+        <div class="dish"><img src="fotos/menu/combo.webp" alt="Hamburguesa y hot dog" loading="lazy" style="--w:96%;--r:-5deg"></div>
+        <div class="tent"><h3>Burger + Hot Dog</h3><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Burger + Hot Dog" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+      <article class="plate rv" style="--c:var(--sky)">
+        <div class="dish"><img src="fotos/menu/tamales.webp" alt="Tamales" loading="lazy" style="--w:76%;--r:10deg"></div>
+        <div class="tent"><h3>Paquete Tamales</h3><small>200 tamales para 50 inv. · 280 para 70 · 400 para 100</small><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Tamales" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+      <article class="plate rv" style="--c:var(--tang)">
+        <div class="dish"><img src="fotos/menu/tacos.webp" alt="Tacos al vapor" loading="lazy" style="--w:90%;--r:-7deg"></div>
+        <div class="tent"><h3>Tacos al Vapor</h3><a href="#" class="js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete Tacos al Vapor" target="_blank" rel="noopener">Cotiza este paquete</a></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- Paquetes de fotos — pasillo 3D de fotos (original) -->
+    <div class="pq-fotos rv">
+      <div class="photo-corridor" id="photoCorridor" aria-hidden="true"></div>
+      <div class="pqf-in">
+        <h3 class="h3">Paquetes de fotos</h3>
+        <p>Fotos digitales de tu fiesta para que se queden con todos los recuerdos.</p>
+        <div class="reel">
+          <div class="frame"><b>35</b><span>fotos digitales</span></div>
+          <div class="frame"><b>45</b><span>fotos digitales</span></div>
+          <div class="frame"><b>58</b><span>fotos digitales</span></div>
+        </div>
+        <a href="#" class="btn btn-light js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete de fotos" target="_blank" rel="noopener">Cotiza este paquete<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      </div>
+      <img class="pqf-cam" src="fotos/menu/camara.webp" alt="" aria-hidden="true" loading="lazy">
+    </div>
+
+    <!-- Paquetes de globos — tarjeta de fotos con globitos decorativos -->
+    <div class="pq-globos">
+      <div class="pqg-copy rv">
+        <h3 class="h3">Paquetes de globos</h3>
+        <p>Arcos, backdrops y centros de mesa armados con los colores y el tema de tu fiesta.</p>
+        <a href="#" class="btn js-wa-link" data-wa-msg="Hola, me gustaría cotizar paquete de globos" target="_blank" rel="noopener">Cotiza este paquete<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+      </div>
+      <div class="pqg-card rv">
+        <div class="pqg-deco" aria-hidden="true">
+          <div class="hb pqg-b1" style="--s:58px;--c:#FF3D9A;--c2:#FF9BCB;--c3:#B01A66"><i></i></div>
+          <div class="hb pqg-b2" style="--s:42px;--c:#33C13D;--c2:#8CF08F;--c3:#1B7A24"><i></i></div>
+          <div class="hb pqg-b3" style="--s:50px;--c:#28B8F4;--c2:#A4E4FF;--c3:#0A6595"><i></i></div>
+        </div>
+        <div class="pqg-frame">
+          <div class="morph-slider" id="globosMorph">
+            <div class="morph-slide is-active" style="background-image:url('fotos/globos/globos-1.jpg')"></div>
+            <div class="morph-slide" style="background-image:url('fotos/globos/globos-2.jpg')"></div>
+            <div class="morph-slide" style="background-image:url('fotos/globos/globos-3.jpg')"></div>
+            <div class="morph-slide" style="background-image:url('fotos/globos/globos-4.jpg')"></div>
+            <div class="morph-slide" style="background-image:url('fotos/globos/globos-5.jpg')"></div>
+            <div class="morph-slide" style="background-image:url('fotos/globos/globos-6.jpg')"></div>
+          </div>
+          <span class="pqg-badge"><b id="globosNow">01</b> / 06</span>
+          <button type="button" class="pqg-arrow prev morph-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+          <button type="button" class="pqg-arrow next morph-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="pqg-dots" id="globosDots"></div>
+      </div>
+    </div>
+
+    <!-- ELOTES -->
+    <div class="elotes" id="elotes">
+      <header class="sec-head center rv">
+        <h3 class="h2">Elotes</h3>
+        <p class="lede">Tostitos preparados, conchitas preparadas y elote en vaso. Elige el tamaño de tu paquete.</p>
+      </header>
+      <div class="elo-grid">
+        <div class="elo-stage rv" id="eloStage" aria-hidden="true">
+          <span class="elo-sun"></span>
+          <div class="elo-item" style="--l:2%;--t:40%;--w:44%;--k:-10"><figure class="elo-prod" style="--rot:-6deg;--d:0s"><img src="fotos/menu/tostitos.webp" alt="" loading="lazy"></figure></div>
+          <div class="elo-item" style="--l:36%;--t:2%;--w:27%;--k:14"><figure class="elo-prod" style="--rot:2deg;--d:-1.4s"><img src="fotos/menu/elote.webp" alt="" loading="lazy"></figure></div>
+          <div class="elo-item" style="--l:52%;--t:48%;--w:46%;--k:-6"><figure class="elo-prod" style="--rot:5deg;--d:-2.6s"><img src="fotos/menu/conchitas.webp" alt="" loading="lazy"></figure></div>
+        </div>
+        <div class="elo-pick rv">
+          <label class="elo-lbl" for="eloRange">Número de invitados</label>
+          <div class="elo-n"><output id="eloOut" for="eloRange">30</output><span>invitados</span></div>
+          <input type="range" id="eloRange" min="30" max="100" step="10" value="30">
+          <div class="elo-ticks" aria-hidden="true"><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span></div>
+          <ul class="elo-counts">
+            <li><img src="fotos/menu/elote.webp" alt=""><b id="eloN1">10</b><span>elotes en vaso</span></li>
+            <li><img src="fotos/menu/tostitos.webp" alt=""><b id="eloN2">10</b><span>tostitos preparados</span></li>
+            <li><img src="fotos/menu/conchitas.webp" alt=""><b id="eloN3">10</b><span>conchitas preparadas</span></li>
+          </ul>
+          <a href="#" id="eloCta" class="btn" target="_blank" rel="noopener">Cotiza este paquete<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        </div>
+      </div>
+
+      <div class="tp" id="tp">
+        <div class="tp-group"><h4>Toppings</h4><ul class="tp-list">
+          <li class="tp-pill" style="--rot:-7deg;--hb:var(--tang);--hc:#fff"><span>Rufles</span></li>
+          <li class="tp-pill" style="--rot:6deg;--hb:var(--grape);--hc:#fff"><span>Chetos Flaming Hot</span></li>
+          <li class="tp-pill" style="--rot:-5deg;--hb:var(--lime);--hc:var(--ink)"><span>Queso rallado</span></li>
+          <li class="tp-pill" style="--rot:7deg;--hb:var(--sky);--hc:var(--ink)"><span>Cacahuate</span></li>
+          <li class="tp-pill" style="--rot:-6deg;--hb:var(--pink);--hc:#fff"><span>Ajonjolí</span></li>
+        </ul></div>
+        <div class="tp-group"><h4>Aderezos</h4><ul class="tp-list">
+          <li class="tp-pill" style="--rot:-7deg;--hb:var(--tang);--hc:#fff"><span>Chipotle cremoso</span></li>
+          <li class="tp-pill" style="--rot:6deg;--hb:var(--grape);--hc:#fff"><span>Queso amarillo</span></li>
+          <li class="tp-pill" style="--rot:-5deg;--hb:var(--lime);--hc:var(--ink)"><span>Crema</span></li>
+          <li class="tp-pill" style="--rot:7deg;--hb:var(--sky);--hc:var(--ink)"><span>Mayonesa</span></li>
+          <li class="tp-pill" style="--rot:-6deg;--hb:var(--pink);--hc:#fff"><span>Salsa botanera</span></li>
+          <li class="tp-pill" style="--rot:5deg;--hb:var(--ink);--hc:#fff"><span>Salsa San Luis</span></li>
+          <li class="tp-pill" style="--rot:-7deg;--hb:var(--tang);--hc:#fff"><span>Salsa elotera</span></li>
+          <li class="tp-pill" style="--rot:6deg;--hb:var(--grape);--hc:#fff"><span>Salsa casera</span></li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ FACEBOOK — publicaciones recientes ═════════════
+     [EDITAR] Cada publicación es un <a data-fb-link>. Cuando tengas los
+     links reales, reemplaza href="#" por la URL de la publicación. -->
+<section id="facebook" class="sec">
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Lo último en Facebook" data-circle="Facebook"></h2>
+      <p class="lede rv">Fiestas de la semana, fechas disponibles y cómo queda el salón antes de que lleguen los invitados.</p>
+      <a href="#" class="fb-follow rv" data-fb-link target="_blank" rel="noopener">
+        <span class="fb-follow-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07"/></svg></span>
+        <span><b>Magic kids</b><small>5.7 mil seguidores · Síguenos</small></span>
+      </a>
+    </header>
+
+    <div class="fb-feed">
+      <a class="fb-post rv" href="#" data-fb-link target="_blank" rel="noopener">
+        <div class="fb-top"><span class="fb-av"><img src="fotos/logo.webp" alt=""></span><div class="fb-who"><b>Magic kids</b><span>3 de septiembre</span></div><span class="fb-dots" aria-hidden="true">···</span></div>
+        <p class="fb-text">Ven y conoce nuestras instalaciones, hay fechas disponibles en el mes de SEPTIEMBRE. Si haces tu fiesta en alguno de esos dos meses se te regalan caballetes y si contr… <span class="fb-more">Ver más</span></p>
+        <div class="fb-media m3"><img src="fotos/galeria-4.webp" alt="Escenario con letrero Magic Kids" loading="lazy"><img src="fotos/hero.webp" alt="Salón montado" loading="lazy"><img src="fotos/extra/extra-1.jpg" alt="Niños pintando en caballetes" loading="lazy"></div>
+        <div class="fb-actions"><span>Me gusta</span><span>Comentar</span><span>Compartir</span></div>
+      </a>
+      <a class="fb-post rv" href="#" data-fb-link target="_blank" rel="noopener">
+        <div class="fb-top"><span class="fb-av"><img src="fotos/logo.webp" alt=""></span><div class="fb-who"><b>Magic kids</b><span>Publicación reciente</span></div><span class="fb-dots" aria-hidden="true">···</span></div>
+        <p class="fb-text">Las mañanitas con botargas y el pastel en el escenario. ¡Gracias por festejar con nosotros!</p>
+        <div class="fb-media"><img src="fotos/extra/extra-3.png" alt="Festejada frente a su pastel con botargas de unicornio" loading="lazy" class="tall"></div>
+        <div class="fb-actions"><span>Me gusta</span><span>Comentar</span><span>Compartir</span></div>
+      </a>
+      <a class="fb-post rv" href="#" data-fb-link target="_blank" rel="noopener">
+        <div class="fb-top"><span class="fb-av"><img src="fotos/logo.webp" alt=""></span><div class="fb-who"><b>Magic kids</b><span>Publicación reciente</span></div><span class="fb-dots" aria-hidden="true">···</span></div>
+        <p class="fb-text">Decoración de Plim Plim lista: arco de globos, letrero de neón y torre de dulceros.</p>
+        <div class="fb-media m2"><img src="fotos/servicio-deco.webp" alt="Backdrop de Plim Plim con arco de globos" loading="lazy"><img src="fotos/globos/globos-4.jpg" alt="Decoración con globos" loading="lazy"></div>
+        <div class="fb-actions"><span>Me gusta</span><span>Comentar</span><span>Compartir</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ NUESTROS SERVICIOS (juegos → servicios.html) ═════════════ -->
+<section id="diversion" class="sec dark">
+  <div class="bubbles" aria-hidden="true">
+    <div class="bubble-wrap" style="--l:4%;--t:6%;--s:1.05"><div class="bubble" style="--d:0s"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="bubble-wrap" style="--l:80%;--t:4%;--s:.7"><div class="bubble" style="--d:-3s"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="bubble-wrap" style="--l:88%;--t:58%;--s:.95"><div class="bubble" style="--d:-5s"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="bubble-wrap" style="--l:-2%;--t:66%;--s:.6"><div class="bubble" style="--d:-2s"><span></span><span></span><span></span><span></span><span></span></div></div>
+  </div>
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title light vcr" data-vcr="Nuestros servicios"></h2>
+      <p class="lede rv">Todos estos juegos están dentro del salón. Toca uno para ver de qué se trata.</p>
+    </header>
+    <ul class="dv-list rv">
+      <li><a href="servicios.html#ping-pong"><span class="dv-th"><img src="diversion/img/ping-pong.png" alt="" loading="lazy"></span>Ping pong</a></li>
+      <li><a href="servicios.html#inflables"><span class="dv-th"><img src="diversion/img/inflables.jpg" alt="" loading="lazy"></span>Inflables</a></li>
+      <li><a href="servicios.html#area-de-bebes"><span class="dv-th"><img src="diversion/img/area-de-bebes-new.png" alt="" loading="lazy"></span>Área de bebés</a></li>
+      <li><a href="servicios.html#toro-mecanico"><span class="dv-th"><img src="diversion/img/toro-mecanico.jpg" alt="" loading="lazy"></span>Toro mecánico</a></li>
+      <li><a href="servicios.html#resbaladero"><span class="dv-th"><img src="diversion/img/resbaladero.jpg" alt="" loading="lazy"></span>Resbaladero</a></li>
+      <li><a href="servicios.html#laberinto"><span class="dv-th"><img src="diversion/img/laberinto-new.png" alt="" loading="lazy"></span>Laberinto</a></li>
+      <li><a href="servicios.html#musica-ambiental"><span class="dv-th"><img src="diversion/img/musica-ambiental.jpg" alt="" loading="lazy"></span>Música ambiental</a></li>
+      <li><a href="servicios.html#mesa-de-hockey"><span class="dv-th"><img src="diversion/img/mesa-de-hockey.webp" alt="" loading="lazy"></span>Mesa de hockey</a></li>
+      <li><a href="servicios.html#retas-x-box"><span class="dv-th"><img src="diversion/img/retas-x-box.jpg" alt="" loading="lazy" style="object-position:82% 42%"></span>Retas X-Box</a></li>
+      <li><a href="servicios.html#billar"><span class="dv-th"><img src="diversion/img/billar.jpg" alt="" loading="lazy"></span>Billar</a></li>
+      <li><a href="servicios.html#futbolito"><span class="dv-th"><img src="diversion/img/futbolito.avif" alt="" loading="lazy"></span>Futbolito</a></li>
+    </ul>
+    <!-- Vista previa que sigue al cursor (solo escritorio, ver assets/site.js) -->
+    <div class="dv-cursor" id="dvCursor" aria-hidden="true"><div class="dv-cursor-in"><img alt=""></div></div>
+    <div class="center-row rv"><a href="servicios.html" class="btn btn-light">Ver todos los servicios<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div>
+  </div>
+</section>
+
+<!-- ═════════════ FAQ ═════════════ -->
+<section id="faq" class="sec">
+  <div class="wrap faq-wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Las preguntas más frecuentes" data-circle="frecuentes"></h2>
+    </header>
+    <div class="faq-list">
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Cuánto tiempo dura la fiesta?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Cada fiesta ocupa un horario de 3 horas y media. Hay tres opciones: de 10 am a 1:30 pm, de 2 pm a 5:30 pm o de 6 pm a 9:30 pm.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Para cuántos invitados son los paquetes?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Todos los paquetes están disponibles para 50, 70 o 100 invitados. Eliges el tamaño que mejor se acomode a tu fiesta.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Qué incluyen todos los paquetes?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Renta del salón, globos, centros de mesa, invitaciones con croquis, refrescos de 2 litros, jarras de agua fresca, personal de servicio, piñata, pastel y botarga, platos, vasos y servilletas, y botana (palomitas o frituras).</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Qué opciones de comida hay?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Puedes elegir entre paquete Burger, Chili Dog, Hot Dog, Burger + Hot Dog, Tamales o Tacos al vapor. Están disponibles de lunes a jueves y de viernes a domingo.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Qué hay para que jueguen los niños?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Tenemos inflables, toro mecánico, resbaladero, laberinto, área de bebés, ping pong, mesa de hockey, futbolito, billar, retas de X-Box y música ambiental.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Puedo agregar elotes o fotos?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Sí. Tenemos paquetes de elotes con tostitos y conchitas preparadas, y paquetes de fotos digitales de 35, 45 o 58 fotos. Escríbenos y te los cotizamos junto con tu paquete.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Cómo aparto mi fecha?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>Escríbenos por WhatsApp con la fecha y el horario que te gustan. Te confirmamos si está libre y te explicamos cómo apartarla.</p></div></div></div>
+      <div class="qa"><button class="qa-q" aria-expanded="false"><span class="qa-t">¿Dónde están ubicados?</span><span class="qa-x" aria-hidden="true"></span></button><div class="qa-a"><div><p>En Av. Perimetral Nte. 879, Misión de Santa Catarina, en Santa Catarina, N.L. También puedes llamarnos al 81 1338 3768.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ GALERÍA — scroll vertical mueve las fotos en horizontal ═════════════ -->
+<section id="galeria" class="gl">
+  <div class="gl-pin" id="glPin">
+    <div class="gl-sticky">
+      <div class="gl-track" id="glTrack" data-lenis-prevent>
+        <header class="gl-head">
+          <h2 class="section-title light vcr" data-vcr="Momentos que hacen sonreír" data-circle="Momentos"></h2>
+          <p class="gl-cue">Sigue bajando<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+        </header>
+        <figure class="gl-it t"><img src="fotos/galeria-1.webp" alt="Salón montado con mantel a rayas" loading="lazy"><figcaption><span>01</span>Salón montado con mantel a rayas</figcaption></figure>
+        <figure class="gl-it w up"><img src="fotos/galeria-4.webp" alt="Escenario con el letrero Magic Kids" loading="lazy"><figcaption><span>02</span>El escenario del show</figcaption></figure>
+        <figure class="gl-it s dn"><img src="fotos/extra/extra-3.png" alt="Festejada frente a su pastel con botargas" loading="lazy"><figcaption><span>03</span>La hora del pastel</figcaption></figure>
+        <figure class="gl-it t"><img src="fotos/galeria-2.webp" alt="Tobogán en espiral del área de juegos" loading="lazy"><figcaption><span>04</span>Tobogán en espiral</figcaption></figure>
+        <figure class="gl-it w dn"><img src="fotos/galeria-5.webp" alt="Backdrop de globos y torre de dulceros" loading="lazy"><figcaption><span>05</span>Backdrop y torre de dulceros</figcaption></figure>
+        <figure class="gl-it s up"><img src="fotos/extra/extra-1.jpg" alt="Niños pintando en caballetes" loading="lazy"><figcaption><span>06</span>Taller de pintura en caballetes</figcaption></figure>
+        <figure class="gl-it t"><img src="fotos/galeria-3.webp" alt="Segundo piso con mural de Tigres y Rayados" loading="lazy"><figcaption><span>07</span>Segundo piso con mural</figcaption></figure>
+        <div class="gl-end">
+          <p class="h3">¿La próxima foto<br>es de tu fiesta?</p>
+          <a href="#contacto" class="btn">Apartar fecha<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        </div>
+      </div>
+      <div class="gl-bar" aria-hidden="true"><span id="glBar"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ SERVICIOS ═════════════ -->
+<section id="servicios" class="sec">
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Todo para una fiesta increíble" data-circle="fiesta"></h2>
+      <p class="lede rv">Botargas, show, merienda y decoración: armamos la fiesta completa para que tú solo llegues a celebrar.</p>
+    </header>
+    <ol class="pr-steps" id="prSteps">
+      <svg class="pr-path" id="prPath" aria-hidden="true"><path class="pr-track"/><path class="pr-line" pathLength="1"/></svg>
+      <li class="pr-step"><span class="pr-dot" style="--c:var(--grape)"></span>
+        <figure class="pr-media"><img src="fotos/espacio-salon.webp" alt="Salón con mesas montadas y globos de centro de mesa" loading="lazy"></figure>
+        <div class="pr-txt"><span class="pr-k" style="color:var(--grape)">01 · primero</span><h3>Salón montado</h3><p>Mesas con mantel a rayas, sillas de colores y globos de centro de mesa, listos cuando llegas.</p></div>
+      </li>
+      <li class="pr-step"><span class="pr-dot" style="--c:var(--pink)"></span>
+        <figure class="pr-media"><img src="fotos/servicio-deco.webp" alt="Backdrop temático con arco de globos, neón y torre de dulceros" loading="lazy"></figure>
+        <div class="pr-txt"><span class="pr-k" style="color:var(--pink)">02 · luego</span><h3>Su personaje favorito, por todos lados</h3><p>Backdrop, arco de globos y torre de dulceros del personaje que elijan, más un muro de lentejuelas con neón de Happy Birthday para las fotos.</p></div>
+      </li>
+      <li class="pr-step"><span class="pr-dot" style="--c:#1FA52B"></span>
+        <figure class="pr-media"><img src="fotos/espacio-juegos.webp" alt="Área de juegos con tobogán y red para trepar" loading="lazy"></figure>
+        <div class="pr-txt"><span class="pr-k" style="color:#1FA52B">03 · mientras tanto</span><h3>Los niños desaparecen en los juegos</h3><p>Tobogán en espiral, red para trepar, toro mecánico y máquinas de videojuegos para los más grandes y los adultos que se animan.</p></div>
+      </li>
+      <li class="pr-step is-cut"><span class="pr-dot" style="--c:var(--tang)"></span>
+        <figure class="pr-media cut"><img src="fotos/menu/burger.webp" alt="Hamburguesa" loading="lazy"></figure>
+        <div class="pr-txt"><span class="pr-k" style="color:var(--tang)">04 · a la mesa</span><h3>Merienda servida y hamburguesas</h3><p>El personal sirve la merienda a los niños en la mesa y hay hamburguesas para los adultos.</p></div>
+      </li>
+      <li class="pr-step"><span class="pr-dot" style="--c:var(--sky)"></span>
+        <figure class="pr-media"><img src="fotos/extra/extra-3.png" alt="Show con botargas y pastel en el escenario" loading="lazy" style="object-position:50% 30%"></figure>
+        <div class="pr-txt"><span class="pr-k" style="color:#1592CB">05 · para cerrar</span><h3>Show, botargas y mañanitas</h3><p>Botargas y animador en el escenario propio, con sonido y micrófono para el show, las mañanitas y el momento del pastel.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════════════ RESEÑAS ═════════════ -->
+<section id="testimonios" class="sec dark">
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title light vcr" data-vcr="Las reseñas de nuestros papás" data-circle="reseñas"></h2>
+      <div class="ts-score rv"><b>4.0</b><span class="ts-stars" aria-label="4 de 5 estrellas">★★★★<i>★</i></span><span>144 reseñas en Google</span></div>
+    </header>
+
+    <!-- Carrete de reseñas: columna central con las reseñas (dibujos/platillos),
+         columnas laterales decorativas que giran al revés. Datos en
+         TS_DATA dentro de assets/site.js — el carrete se arma solo. -->
+    <div class="ts-reel rv" id="tsReel" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Reseñas">
+      <div class="ts-reel-visual" aria-hidden="true">
+        <div class="ts-col" id="tsColL"></div>
+        <div class="ts-col" id="tsColM"></div>
+        <div class="ts-col" id="tsColR"></div>
+      </div>
+      <div class="ts-body">
+        <svg class="ts-qm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.58 17.32C3.55 16.23 3 15 3 13.01c0-3.5 2.46-6.64 6.03-8.19l.9 1.38c-3.34 1.8-4 4.15-4.25 5.62.54-.28 1.24-.38 1.93-.31 1.8.17 3.23 1.65 3.23 3.49a3.5 3.5 0 0 1-3.5 3.5c-1.07 0-2.1-.49-2.75-1.18zm10 0C13.55 16.23 13 15 13 13.01c0-3.5 2.46-6.64 6.03-8.19l.9 1.38c-3.34 1.8-4 4.15-4.25 5.62.54-.28 1.24-.38 1.93-.31 1.8.17 3.23 1.65 3.23 3.49a3.5 3.5 0 0 1-3.5 3.5c-1.07 0-2.1-.49-2.75-1.18z"/></svg>
+        <div class="ts-stage" id="tsStage" aria-live="polite">
+          <p class="ts-quote" id="tsQuote"></p>
+          <p class="ts-author" id="tsAuthor"></p>
+        </div>
+        <div class="ts-ctrl">
+          <button type="button" class="round-btn" id="tsPrev" aria-label="Reseña anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+          <div class="ts-bars" id="tsBars"></div>
+          <button type="button" class="round-btn" id="tsNext" aria-label="Reseña siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ CALENDARIO — "revienta tu fecha" (hora de Monterrey, hasta 2035) ═════════════
+     Cada día es un globo. Todo se arma solo en assets/site.js (bloque "CALENDARIO").
+     Horarios y turnos se editan al inicio de ese bloque. Sin backend: el "hoy"
+     sale de la hora de Monterrey, no del reloj del dispositivo. -->
+<section id="calendario" class="sec">
+  <div class="wrap">
+    <header class="sec-head center">
+      <h2 class="section-title dark-txt vcr" data-vcr="Aparta tu fecha" data-circle="fecha"></h2>
+      <p class="lede rv">Revienta el globo del día que quieras, escoge tu turno y mándanos tu fecha por WhatsApp. Nosotros te confirmamos si está libre.</p>
+    </header>
+
+    <div class="cal-stage rv" id="cal">
+      <div class="cal-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+      <div class="cal-aside">
+        <div class="cal-head">
+          <button type="button" class="cal-title" id="calTitle" aria-expanded="false" aria-controls="calPicker" aria-label="Elegir mes y año">
+            <span class="cal-year" id="calYear"></span>
+            <span class="cal-month" id="calMonth" aria-live="polite"></span>
+            <span class="cal-jump">Cambiar mes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="cal-arrows">
+            <button type="button" class="cal-nav" id="calPrev" aria-label="Mes anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="cal-nav" id="calNext" aria-label="Mes siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="cal-focus" id="calFocus" aria-live="polite"></div>
+        <div class="cal-pick" id="calPick" aria-live="polite"></div>
+      </div>
+
+      <div class="cal-sky">
+        <div class="cal-dow" aria-hidden="true"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span class="we">Sáb</span><span class="we">Dom</span></div>
+        <div class="cal-days pre" id="calDays"></div>
+
+        <!-- selector rápido de mes y año -->
+        <div class="cal-picker" id="calPicker" aria-hidden="true">
+          <div class="cal-py">
+            <button type="button" class="cal-nav" id="calYPrev" aria-label="Año anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <b id="calYTxt"></b>
+            <button type="button" class="cal-nav" id="calYNext" aria-label="Año siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+          <div class="cal-pm" id="calPM"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ UBICACIÓN — fondo de globos (original) ═════════════ -->
+<section id="ubicacion" class="sec">
+  <canvas class="ub-canvas" aria-hidden="true"></canvas>
+  <div class="wrap ub-grid">
+    <div class="ub-copy">
+      <h2 class="section-title light vcr" data-vcr="Fácil de llegar" data-circle="llegar"></h2>
+      <p class="ub-desc rv">Estamos sobre Av. Perimetral Norte, en Misión de Santa Catarina, muy fácil de encontrar. Acceso rápido desde la avenida y lugar para que las familias invitadas se estacionen sin batallar.</p>
+      <ul class="ub-facts rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Av. Perimetral Nte. 879-Loc 7, Misión de Santa Catarina, 66360 Santa Catarina, N.L.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>4.0 en Google · 144 reseñas</li>
+      </ul>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Magic+Kids+Av+Perimetral+Nte+879+Santa+Catarina" target="_blank" rel="noopener" class="btn rv">Cómo llegar<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+    </div>
+    <div class="ub-map rv">
+      <iframe src="https://maps.google.com/maps?q=Magic+Kids+Av+Perimetral+Nte+879+Santa+Catarina+NL&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Magic Kids en Google Maps"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════ CONTACTO — partículas (original) ═════════════ -->
+<section id="contacto" class="sec">
+  <div id="visita-morphic" aria-hidden="true"></div>
+  <div class="wrap ct-grid">
+    <div class="ct-copy">
+      <h2 class="section-title light vcr ct-title" data-vcr="Hagamos una fiesta inolvidable" data-circle="inolvidable"></h2>
+      <p class="rv">Cuéntanos qué fiesta imaginas para tu peque: el tema, la fecha y más o menos cuántos invitados. Te mandamos una cotización clara el mismo día, sin compromiso.</p>
+      <div class="ct-actions rv">
+        <a href="#" class="btn btn-wa js-wa-link" data-wa-msg="Hola, quiero cotizar una fiesta infantil" target="_blank" rel="noopener">WhatsApp<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        <a href="tel:+528113383768" class="btn btn-light js-tel-link">Llamar ahora<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></i></a>
+      </div>
+    </div>
+    <dl class="ct-info rv">
+      <div><dt>Dirección</dt><dd>Av. Perimetral Nte. 879-Loc 7, Misión de Santa Catarina, 66360 Santa Catarina, N.L.</dd></div>
+      <div><dt>Teléfono / WhatsApp</dt><dd><a href="tel:+528113383768" class="js-tel-link">+52 81 1338 3768</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:hola@magickids.com">hola@magickids.com</a></dd></div>
+      <div><dt>Horario de atención</dt><dd>Lun a Vie: 11:00 am a 7:00 pm<br>Sáb y Dom: 10:00 am a 8:00 pm</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<!-- ═════════════ FOOTER ═════════════ -->
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div class="ft-brand">
+      <img src="fotos/logo.webp" alt="Magic Kids" width="700" height="597" loading="lazy">
+      <p>Fiestas Infantiles · Santa Catarina, N.L.</p>
+    </div>
+    <nav class="ft-col" aria-label="Secciones">
+      <h4>Explora</h4>
+      <a href="#espacios">Nuestro Salón</a><a href="#precios">Paquetes</a><a href="servicios.html">Servicios</a><a href="#galeria">Galería</a><a href="#testimonios">Reseñas</a><a href="#calendario">Fechas</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="ft-col">
+      <h4>Visítanos</h4>
+      <p>Av. Perimetral Nte. 879-Loc 7<br>Misión de Santa Catarina<br>66360 Santa Catarina, N.L.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Escríbenos</h4>
+      <a href="#" class="js-wa-link" data-wa-msg="Hola, quiero cotizar una fiesta infantil en Magic Kids" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+528113383768" class="js-tel-link">81 1338 3768</a>
+      <a href="#" data-fb-link target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+  <div class="wrap ft-bottom"><span>© <span id="ftYear">2026</span> Magic Kids · Todos los derechos reservados</span><span>Diseño web · Demo</span></div>
+</footer>
+
+<!-- Boleto del día (se abre al reventar un globo del calendario) -->
+<div class="cal-modal" id="calModal" role="dialog" aria-modal="true" aria-labelledby="calMTitle" hidden>
+  <div class="cal-backdrop" data-cal-close></div>
+  <div class="cal-sheet" id="calSheet" tabindex="-1">
+    <div class="cal-ticket">
+      <button type="button" class="cal-x" data-cal-close aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+
+      <div class="cal-stub" id="calStub" aria-hidden="true">
+        <span class="st-date">
+          <span class="st-mon" id="calMMon"></span>
+          <b class="st-num" id="calMNum"></b>
+        </span>
+        <span class="st-dow" id="calMDow"></span>
+      </div>
+
+      <div class="cal-tbody" data-lenis-prevent>
+        <span class="cal-m-badge" id="calMBadge" hidden>Hoy</span>
+        <h3 id="calMTitle"></h3>
+        <p class="cal-m-hours" id="calMHours"></p>
+
+        <div class="cal-m-step">
+          <button type="button" id="calMPrev" aria-label="Día anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>Día anterior</button>
+          <button type="button" id="calMNext" aria-label="Día siguiente">Día siguiente<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+
+        <div class="cal-m-sec">
+          <h4>Turno de tu fiesta <small>(opcional)</small></h4>
+          <div class="cal-slots" id="calSlots"></div>
+        </div>
+
+        <a href="https://wa.me/528113383768" class="btn btn-wa" id="calWa" target="_blank" rel="noopener">Reservar por WhatsApp<i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        <p class="cal-m-note">Sin compromiso. Te respondemos por WhatsApp para confirmar que la fecha esté libre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="wa-float js-wa-link" data-wa-msg="Hola, quiero cotizar una fiesta infantil" title="Escríbenos por WhatsApp" aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.88 9.88 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41z"/></svg></a>
+
+<script src="assets/site.js?v=11"></script>
+</body>
+</html>
